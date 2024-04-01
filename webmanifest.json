@@ -1,1 +1,1 @@
-{  "name": "Nova OS",  "short_name": "NovaOS",  "theme_color": "#fff",  "background_color": "#fff",  "display": "standalone",  "scope": "/",  "start_url": "/adthoughtsglobal.github.io/novaapp"}
+{  "name": "Nova OS",  "short_name": "NovaOS",  "theme_color": "#fff",  "background_color": "#fff",  "display": "standalone",  "scope": "/adthoughtsglobal.github.io/novaapp",  "start_url": "/adthoughtsglobal.github.io/novaapp"}
