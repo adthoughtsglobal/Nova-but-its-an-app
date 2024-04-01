@@ -1,0 +1,280 @@
+<!---Code Licensed under Nova license and Adthoughtsglobal Nova Terms of use https://github.com/adthoughtsglobal/Nova-OS/blob/main/Adthoughtsglobal%20Nova%20Terms%20of%20use--->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="manifest" href="manifest.json" />
+	
+	<title>Nova OS</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="SuperNova/system32.js" defer></script>
+	<!-- Include pako library (CDN) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.3/pako.min.js"></script>
+	</script>
+
+	<script src="scripties.js" defer></script>
+	<script src="script.js" defer></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+	<div class="container2">
+		<div id="bgimage" class="layer44"></div>
+		<dialog id="edison">
+			<img src="/N.webp" alt="Nova">
+			<div class="loader5345"></div>
+			<h1 class="gradient-text">Platinum</h1>
+		</dialog>
+		<script>
+			function gid(x) {
+				return document.getElementById(x);
+			}
+			gid("edison").showModal()
+		</script>
+
+		<noscript>
+			<h1>I don't even know what time is it now. Who to say? your browser...</h1>
+			<p>Well your browser seems to be messing around turning off some JS...</p>
+			<b>If you have set JS to be desabled:</b>
+			<p>Nova OS require JS to run.
+				<li>You can always <b><a href="https://www.larimer.gov/it/enable-javascript"> turn JS on</a>.</b></li>
+				</ul>
+			</p>
+		</noscript>
+
+		<div class="container layer44" id="desktop">
+			<span class="deskloadspan">Desktop Is loading...</span>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script>
+		$(function () {
+			$(".container").sortable();
+		});
+	</script>
+
+	<div id="notification">
+		<span class="material-icons wincl"
+			onclick="document.getElementById('notification').style.display = 'none';">close</span>
+		<span id="notifappName">App Name</span>
+		<h2 id="notifTitle">Title</h2>
+		<p id="notifappDesc">Description</p>
+	</div>
+
+	<nav id="novanav">
+		<div class="flodiv">
+			<quicks navobj id="dock">
+				<biv class="tooltip">
+					<div app-shortcut onclick="openapp('files', 1)">
+
+						<span ic class="material-icons">
+							folder
+						</span>
+						<span class="tooltiptext">Files</span>
+					</div>
+				</biv>
+				<biv class="tooltip">
+					<div app-shortcut onclick="openapp('camera', 1)">
+
+						<span ic class="material-icons">
+							photo_camera
+						</span>
+						<span class="tooltiptext">Camera</span>
+					</div>
+				</biv>
+				<biv class="tooltip">
+					<div app-shortcut onclick="openapp('settings', 1)">
+						<span ic class="material-icons">
+							settings
+						</span>
+						<span class="tooltiptext">Settings</span>
+					</div>
+				</biv>
+			</quicks>
+			<your navobj>
+				<div app-shortcut>
+					<span ic class="material-icons" id="mm" onclick="openn()">N?
+					</span>
+				</div>
+				<g id="your-apps">
+
+				</g>
+			</your>
+			<info navobj>
+				<div>
+					<span id="battery-p-display">
+						%
+					</span>
+					<span id="battery-display" class="material-icons">
+						p ic
+					</span>
+				</div>
+				<div>
+					<span id="time-display">time</span><br>
+					<span id="date-display">date</span>
+				</div>
+			</info>
+			<info navobj onclick="dashtoggle()">
+				<div>
+					<span class="material-icons">
+						dashboard
+					</span>
+				</div>
+			</info>
+		</div>
+	</nav>
+	<dialog id="appdmod">
+		<div>
+			<h1>Apps</h1>
+		</div>
+		<div id="appdeck">
+			<div id="appsindeck">
+
+			</div>
+			<div class="strtappsugs" id="strtappsugs">
+				apps appear here
+			</div>
+			<div class="strtsearcont">
+				<div class="neweles" id="bobthedropdown" style="visibility: hidden;">
+					<button class="tooltip" onclick="location.reload()">
+						<span class="tooltiptext">Restart</span>
+						<span class="material-symbols-rounded">
+							restart_alt
+						</span>
+					</button>
+					<button class="tooltip" onclick="document.getElementById('sleepwindow').showModal()">
+						<span class="tooltiptext">Sleep</span>
+						<span class="material-symbols-rounded">
+							bedtime
+						</span>
+					</button>
+					<button class="tooltip" onclick="location.href = 'platiniumloader.html'">
+						<span class="tooltiptext">Close Nova</span>
+						<span class="material-symbols-rounded">
+							power
+
+						</span>
+					</button>
+				</div>
+				<button onclick="togglepowermenu()">
+					<span class="material-icons">
+						power_settings_new
+					</span>
+				</button>
+				<input placeholder="Search an app..." autocomplete="off" id="strtsear" onkeyup="strtappse()">
+			</div>
+		</div>
+	</dialog>
+	<dialog id="bios">
+		<h1>Nova Setup</h1>
+		<p>Welcome to Nova Setup. This page deals with critical choices that may affect your data and the os itself.
+			remember, clicking on any buttons here might cause damage to your data.</p>
+		<button class="gudbtn" onclick="gid('bios').close()">Exit Setup</button>
+		<button onclick="">Remove Existance (IDB)</button>
+		<button onclick="location.reload()">Hard Refresh (ReBoot)</button>
+		<button onclick="window.location.href = 'platiniumloader.html'">Switch to other versions of Nova OS</button>
+
+	</dialog>
+	<dialog id="startup">
+		<div class="content">
+			<div class="custom-loader2"></div>
+			<h1 id="startuptx">Setting up your OS</h1>
+		</div>
+	</dialog>
+
+	<div id="contextMenu" class="context-menu" style="display:none">
+		<ul>
+			<li><a onclick="dod()">
+					<span ic="" class="material-icons">
+						refresh
+					</span>
+					Refresh</a></li>
+			<li><a onclick="document.getElementById('bios').showModal()">
+					<span ic="" class="material-icons">
+						account_circle
+					</span>
+					Launch BIOS</a></li>
+		</ul>
+	</div>
+	<dialog id="dashboard">
+		<div class="dashhmm">
+			<div class="sideleft">
+				<div id="dashnots">
+
+
+					<div class="notifpan">
+						<span class="notifpan-appic"></span>
+						<b>Welcome Back To Nova OS!</b>
+						<small>Welcome to Nova OS! Thank you for using this OS, we believe that this OS is built
+							efficient
+							for
+							your daily usage. Don't forget that this OS is still under development! Enjoy!</small>
+					</div>
+				</div>
+				<div id="quicsets" title="comming soon">
+					<biv class="tooltip">
+						<button id="qksts-int">
+							<span class="material-icons">
+								language
+							</span>
+						</button>
+						<span class="tooltiptext">Internet</span>
+					</biv>
+
+					<biv class="tooltip">
+						<button id="qksts-int">
+							<span class="material-icons">delete</span>
+						</button>
+						<span class="tooltiptext">Bin</span>
+					</biv>
+				</div>
+			</div>
+			<div class="sideright">
+				<div class="rightsidesmadivs"></div>
+				<div class="rightsidesmadivs bro">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="rightsidesmadivs"></div>
+			</div>
+		</div>
+	</dialog>
+	<dialog id="loginmod">
+		<div class="logincard">
+			<span class="logincardwelt">Welcome!</span>
+			<button>
+
+				<span hi>Guest</span>
+				<span class="material-icons">navigate_next</span>
+			</button>
+		</div>
+	</dialog>
+	<dialog id="sleepwindow">
+		<div class="sleepwincon">
+			<h1 id="sleeptimer">00:00</h1>
+			<p id="sleepmessage"></p>
+			<div id="sleepbtns">
+				<div>
+					<button onclick="startTimer(1)">60s</button>
+					<button onclick="startTimer(5)">5m</button>
+					<button onclick="startTimer(10)">10m</button>
+					<button onclick="startTimer(60)">1h</button>
+				</div>
+
+				<br>
+				<button onclick="setMessage()">Display a message</button>
+				<br>
+			</div>
+			<span class="material-icons"
+				onclick="document.getElementById('sleepwindow').close(); clearInterval(countdown);document.getElementById('sleeptimer').textContent = '00:00';document.getElementById('sleepbtns').style.display = 'block';">close</span>
+		</div>
+	</dialog>
+</body>
+
+</html>
